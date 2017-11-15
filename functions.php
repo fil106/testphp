@@ -83,7 +83,7 @@ function getHost($arr) {
 function getPosition($arr) {
     $result[] = array();
     for ($i=0;$i<count($arr);$i++) {
-        $result[$i] = $arr[$i][response][GeoObjectCollection][featureMember][0][GeoObject][Point][pos];
+        $result[] = $arr[$i][response][GeoObjectCollection][featureMember][0][GeoObject][Point][pos];
     }
     return $result;
 }
