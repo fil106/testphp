@@ -12,14 +12,4 @@ include_once ('classes.php');
 $zabbix = new Zabbix("fedorov25", "10Fil08F1995");
 $host = $zabbix->getHosts();
 
-$arrH = array();
-
-for ($i=0; $i < 5; $i++) { 
-	$arrH[] = $host[$i];
-}
-
-$ya = sendPost("yandex", $arrH, null);
-
-$pos = getPosition($ya);
-
-print_r($ya);
+print_r($host);
