@@ -82,8 +82,10 @@ class Zabbix {
 
         curl_close($myCurl);
 
-        foreach ($arr as $key => $value) {
-
+        $result = array();
+        for ($i=0; $i < count($arr[0][result]); $i++) { 
+            $a = explode('.', $arr[0][result][$i][name]);
+            $result[] = $a[0];
         }
 
         return $result;
